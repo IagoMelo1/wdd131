@@ -1,0 +1,119 @@
+/* --- Base / Reset --- */
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    color: #e7e7e7;
+    background: #ffffff;
+
+    /* CSS GRID no body (requisito) */
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header"
+        "content"
+        "footer";
+}
+
+/* --- Largura do conteúdo centralizado como no mock --- */
+header,
+main,
+footer {
+    width: min(780px, 92vw);
+    /* parecido com a imagem */
+    margin-inline: auto;
+}
+
+/* --- HEADER --- */
+header {
+    grid-area: header;
+}
+
+.bar {
+    padding: 18px 14px;
+}
+
+.header-bar {
+    background: #3a3a3a;
+    /* cinza escuro do topo */
+}
+
+/* NAV (dentro do header) */
+.nav-bar {
+    background: #000000;
+    /* faixa preta do menu */
+    padding-block: 12px;
+}
+
+.nav-bar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    /* Flex no menu (requisito) */
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.nav-bar a {
+    color: #ffffff;
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 12px;
+}
+
+.nav-bar a[aria-current="page"] {
+    font-weight: 600;
+}
+
+/* --- MAIN: duas colunas (conteúdo + aside) --- */
+main {
+    grid-area: content;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    /* proporção semelhante ao mock */
+    gap: 18px;
+    padding: 14px;
+}
+
+.main-content {
+    background: #d3d3d3;
+    /* bloco cinza claro do mock */
+    min-height: 320px;
+    /* altura para ficar parecido */
+    color: #3a3a3a;
+    padding: 12px;
+}
+
+.aside-content {
+    background: #ffffff;
+    /* lado direito branco, como na imagem */
+    color: #3a3a3a;
+    padding: 12px;
+}
+
+/* --- FOOTER --- */
+footer {
+    grid-area: footer;
+}
+
+.footer-bar {
+    background: #3a3a3a;
+    /* mesmo tom do header */
+    text-align: center;
+}
+
+/* Acessibilidade de foco */
+a:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 2px;
+}
