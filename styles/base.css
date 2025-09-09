@@ -83,7 +83,7 @@ main>h1 {
 .card {
     background: #fff;
     border: 1px solid #dcdcdc;
-    /* borda clara como no print */
+    /* light border as in the print */
     border-radius: 12px;
     box-shadow: none;
     padding: 1rem;
@@ -91,10 +91,10 @@ main>h1 {
 
 .card h2 {
     background: #1f4e7a;
-    /* faixa azul do título */
+    /* blue strip in the title */
     color: #fff;
     margin: -1rem -1rem 1rem;
-    /* estica até as bordas */
+    /* stretches to the edges */
     padding: .6rem 1rem;
     border-radius: 10px 10px 6px 6px;
     text-align: center;
@@ -102,14 +102,14 @@ main>h1 {
     font-weight: 600;
 }
 
-/* ===== ABOUT ME (linha com foto + texto) ===== */
+/* ===== ABOUT ME (row with photo + text) ===== */
 .card--about .about-row {
     display: flex;
     grid-template-columns: 260px 1fr;
-    /* largura exata do print */
+    /* exact width as in the print */
     gap: 2.5rem;
     align-items: right;
-    /* centralizado verticalmente como no print */
+    /* vertically centered as in the print */
     margin-top: .25rem;
 }
 
@@ -119,14 +119,13 @@ main>h1 {
     border-radius: 12px;
     border: 1px solid #d6d6d6;
     display: flex;
-
 }
 
 .card--about .about-text {
     margin-top: 2rem;
 }
 
-/* ===== Linha divisória ===== */
+/* ===== Divider line ===== */
 .card hr {
     border: 0;
     height: 2px;
@@ -135,7 +134,7 @@ main>h1 {
     margin: 1.25rem 0;
 }
 
-/* ===== Subtítulo ===== */
+/* ===== Subtitle ===== */
 .card h3 {
     margin: .2rem 0 .8rem;
     font-family: 'Montserrat', sans-serif;
@@ -143,11 +142,11 @@ main>h1 {
     color: #1f2d3d;
 }
 
-/* ===== Rio de Janeiro: texto esq + bandeira dir ===== */
+/* ===== Rio de Janeiro: text left + flag right ===== */
 .location {
     display: grid;
     grid-template-columns: 1.2fr 320px;
-    /* coluna do texto + coluna fixa da bandeira */
+    /* text column + fixed column for the flag */
     gap: 2rem;
     align-items: center;
 }
@@ -167,7 +166,7 @@ main>h1 {
     border-radius: 6px;
     border: 1px solid #d6d6d6;
     box-shadow: 0 0 0 3px #eee inset;
-    /* moldura suave como no print */
+    /* smooth frame as in the print */
 }
 
 .flag figcaption {
@@ -177,7 +176,7 @@ main>h1 {
     color: #6b6b6b;
 }
 
-/* ===== LISTA DO CARD DIREITO ===== */
+/* ===== RIGHT CARD LIST ===== */
 .card ul {
     padding-left: 1.2rem;
 }
@@ -207,14 +206,14 @@ footer {
 #lastModified {
     display: inline-block;
     margin-top: .35rem;
-    background: #345d21;
+    background: #ffffff;
     color: #fff;
     padding: .2rem .5rem;
     border-radius: 4px;
     font-size: .85rem;
 }
 
-/* ===== RESPONSIVO ===== */
+/* ===== RESPONSIVE ===== */
 @media (max-width:760px) {
     main {
         grid-template-columns: 1fr;
