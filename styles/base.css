@@ -1,0 +1,230 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --primary-color: #003366;
+    --secondary-color: #444;
+    --accent-color: #007acc;
+    --light-color: #f5f5f5;
+    --max-width: 1200px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.6;
+    background: var(--light-color);
+    color: #222;
+}
+
+/* ===== HEADER ===== */
+header {
+    background: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+.page-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.page-title .highlight {
+    color: #F8E06E;
+    font-weight: 700;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 12rem;
+    background: #3a3330;
+    padding: .8rem;
+    border-bottom: 3px solid #2e2926;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: .3rem .6rem;
+    border-radius: 4px;
+}
+
+nav a:hover {
+    background: var(--accent-color);
+}
+
+/* ===== MAIN GRID ===== */
+main {
+    max-width: var(--max-width);
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+main>h1 {
+    grid-column: 1/-1;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 1rem;
+}
+
+/* ===== CARDS ===== */
+.card {
+    background: #fff;
+    border: 1px solid #dcdcdc;
+    /* borda clara como no print */
+    border-radius: 12px;
+    box-shadow: none;
+    padding: 1rem;
+}
+
+.card h2 {
+    background: #1f4e7a;
+    /* faixa azul do título */
+    color: #fff;
+    margin: -1rem -1rem 1rem;
+    /* estica até as bordas */
+    padding: .6rem 1rem;
+    border-radius: 10px 10px 6px 6px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+/* ===== ABOUT ME (linha com foto + texto) ===== */
+.card--about .about-row {
+    display: flex;
+    grid-template-columns: 260px 1fr;
+    /* largura exata do print */
+    gap: 2.5rem;
+    align-items: right;
+    /* centralizado verticalmente como no print */
+    margin-top: .25rem;
+}
+
+.card--about .media img {
+    width: 260px;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid #d6d6d6;
+    display: flex;
+
+}
+
+.card--about .about-text {
+    margin-top: 2rem;
+}
+
+/* ===== Linha divisória ===== */
+.card hr {
+    border: 0;
+    height: 2px;
+    background: #cfcfcf;
+    border-radius: 2px;
+    margin: 1.25rem 0;
+}
+
+/* ===== Subtítulo ===== */
+.card h3 {
+    margin: .2rem 0 .8rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #1f2d3d;
+}
+
+/* ===== Rio de Janeiro: texto esq + bandeira dir ===== */
+.location {
+    display: grid;
+    grid-template-columns: 1.2fr 320px;
+    /* coluna do texto + coluna fixa da bandeira */
+    gap: 2rem;
+    align-items: center;
+}
+
+.location-text {
+    line-height: 1.65;
+    margin-bottom: 2em;
+}
+
+.flag {
+    text-align: center;
+}
+
+.flag img {
+    width: 320px;
+    height: auto;
+    border-radius: 6px;
+    border: 1px solid #d6d6d6;
+    box-shadow: 0 0 0 3px #eee inset;
+    /* moldura suave como no print */
+}
+
+.flag figcaption {
+    margin-top: .35rem;
+    font-size: .9rem;
+    font-style: italic;
+    color: #6b6b6b;
+}
+
+/* ===== LISTA DO CARD DIREITO ===== */
+.card ul {
+    padding-left: 1.2rem;
+}
+
+.card ul li {
+    margin: .4rem 0;
+}
+
+.card a {
+    color: #1e63b5;
+    text-decoration: underline;
+}
+
+.card a:hover {
+    text-decoration: none;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #1f4e7a;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    border-top: 4px solid #153754;
+}
+
+#lastModified {
+    display: inline-block;
+    margin-top: .35rem;
+    background: #345d21;
+    color: #fff;
+    padding: .2rem .5rem;
+    border-radius: 4px;
+    font-size: .85rem;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width:760px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .card--about .about-row {
+        grid-template-columns: 1fr;
+    }
+
+    .location {
+        grid-template-columns: 1fr;
+    }
+}

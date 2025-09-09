@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>WDD 131 – Dynamic Web Fundamentals – Iago Melo</title>
+    <meta name="description" content="WDD 131 – Dynamic Web Fundamentals. Landing page for Iago Melo." />
+    <meta name="author" content="Iago Melo" />
+    <link rel="stylesheet" href="styles/base.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="page-title">WDD 131 – Dynamic Web Fundamentals - <span class="highlight">Iago Melo</span></h1>
+        <nav>
+            <a href="https://www.linkedin.com/in/iagomgmelo/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://byupw.instructure.com/" target="_blank" rel="noopener">Canvas</a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7" target="_blank"
+                rel="noopener">Scripture</a>
+            <a href="#" title="Placeholder for the final project folder">Final Project</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- CARD 1 -->
+        <section class="card card--about">
+            <h2>About Me</h2>
+
+            <!-- LINHA: FOTO ESQ + TEXTO DIR -->
+            <div class="about-row">
+                <figure class="media">
+                    <img src="images/profile.jpg" alt="Portrait photo of Iago Melo">
+                </figure>
+
+                <div class="about-text">
+                    <p>
+                        Hi! I’m Iago Melo — a Brazilian from Rio de Janeiro, now living in Hamilton, Ontario, Canada.
+                        I’m studying web development (HTML, CSS, and JavaScript) in WDD 131 to build clean, accessible,
+                        and responsive pages. I enjoy entrepreneurship, tech, and hands-on problem solving.
+                    </p>
+                </div>
+            </div>
+
+            <hr>
+
+            <!-- SUBSEÇÃO: TÍTULO + TEXTO ESQ + BANDEIRA DIR -->
+            <h3>Rio de Janeiro, Brazil</h3>
+            <div class="location">
+                <div class="location-text">
+                    <p>
+                        I was born in Rio, famous for its beaches, mountains, and vibrant culture. Portuguese is my
+                        first language, and I bring that Brazilian energy and resilience into my projects and learning.
+                    </p>
+                </div>
+
+                <figure class="flag">
+                    <img src="images/brazil-flag.jpg" alt="Official Flag of Brazil">
+                    <figcaption>Official Flag of Brazil</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- CARD 2 -->
+        <section class="card">
+            <h2>Web Dev Resources</h2>
+            <ul>
+                <li><a href="https://dev.to/" target="_blank" rel="noopener">Dev.to Community</a></li>
+                <li><a href="https://www.smashingmagazine.com/" target="_blank" rel="noopener">Smashing Magazine</a>
+                </li>
+                <li><a href="https://developer.mozilla.org/en-US/" target="_blank" rel="noopener">MDN Web Docs</a></li>
+                <li><a href="https://www.w3schools.com/" target="_blank" rel="noopener">W3Schools</a></li>
+                <li><a href="images/placeholder.png" target="_blank" rel="noopener">Local Image Placeholder</a></li>
+            </ul>
+
+            <h3>Hamilton, Ontario</h3>
+            <p>
+                I currently live in Hamilton — a city known for its waterfall trails and proximity to the GTA.
+                It’s a great place to study, work, and build web projects.
+            </p>
+            <figure class="media">
+                <img src="images/hamilton.jpg" alt="Hamilton, Ontario skyline or trail" width="320" height="200">
+                <figcaption>Hamilton, Ontario</figcaption>
+            </figure>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> • Iago Melo • Hamilton, Ontario, Canada</p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script src="scripts/getdates.js"></script>
+</body>
+
+</html>
