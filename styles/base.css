@@ -108,7 +108,7 @@ main>h1 {
     grid-template-columns: 260px 1fr;
     /* exact width as in the print */
     gap: 2.5rem;
-    align-items: right;
+    align-items: center;
     /* vertically centered as in the print */
     margin-top: .25rem;
 }
@@ -122,7 +122,7 @@ main>h1 {
 }
 
 .card--about .about-text {
-    margin-top: 2rem;
+    margin-bottom: 7rem;
 }
 
 /* ===== Divider line ===== */
