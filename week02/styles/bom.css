@@ -1,0 +1,146 @@
+/* ========== Theme ========== */
+:root {
+    --panel: #e3e3e3;
+    /* card gray */
+    --panel-border: #cfcfcf;
+    /* card border */
+    --ink: #111;
+    /* texts */
+    --muted: #6b7280;
+    /* soft texts */
+    --field: #fff;
+    /* fields */
+    --field-border: #c7c7c7;
+    /* input/button border */
+    --x-bg: #efefef;
+    /* X button background */
+    --x-border: #c9c9c9;
+    /* X border */
+    --x-ink: #e84a78;
+    /* X color (pink) */
+}
+
+/* basic reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 2rem 1rem 3rem;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    color: var(--ink);
+    background: #fff;
+}
+
+/* title */
+h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: .2px;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+/* gray panel */
+.card {
+    width: min(760px, 92vw);
+    background: var(--panel);
+    border: 1px solid var(--panel-border);
+    border-radius: 4px;
+    padding: 1.25rem;
+    display: grid;
+    gap: .75rem;
+}
+
+/* strong label as in the screenshot */
+label {
+    font-weight: 800;
+    color: var(--ink);
+    margin-bottom: .25rem;
+}
+
+/* text field */
+input {
+    width: 100%;
+    padding: .65rem .75rem;
+    background: var(--field);
+    border: 1.5px solid var(--field-border);
+    border-radius: 4px;
+    outline: none;
+}
+
+/* Add Chapter button — light with border and full width */
+button {
+    width: 100%;
+    padding: .7rem 1rem;
+    border-radius: 4px;
+    border: 1.5px solid var(--field-border);
+    background: #f3f3f3;
+    font-size: 1.05rem;
+    cursor: pointer;
+}
+
+button:hover {
+    filter: brightness(0.98);
+}
+
+/* list */
+ul {
+    list-style: none;
+    display: grid;
+    gap: 1rem;
+    margin-top: .25rem;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .75rem;
+    padding: .35rem .25rem;
+}
+
+/* chapter in bold, spacing similar to mock */
+li::first-line {
+    font-weight: 800;
+}
+
+/* X button small square */
+li button.delete {
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    border-radius: 6px;
+    background: var(--x-bg);
+    border: 1.5px solid var(--x-border);
+    color: var(--x-ink);
+    font-size: 1.15rem;
+    font-weight: 700;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0;
+}
+
+li button.delete:hover {
+    filter: brightness(0.97);
+}
+
+/* responsive (bigger text on desktop) */
+@media (min-width: 700px) {
+    h1 {
+        font-size: 2.25rem;
+    }
+
+    .card {
+        width: min(860px, 90vw);
+    }
+}
