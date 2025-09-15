@@ -46,10 +46,10 @@ function render(list, label = "Home") {
 /* ========= Filtros do menu ========= */
 const filters = {
     home: () => temples,
-    old: () => temples.filter(t => t.dedicated < 1900),
-    new: () => temples.filter(t => t.dedicated > 2000),
-    large: () => temples.filter(t => t.area >= 90000),
-    small: () => temples.filter(t => t.area < 10000)
+    old: () => temples.filter(t => t.dedicated < 1950),
+    new: () => temples.filter(t => t.dedicated > 2020),
+    large: () => temples.filter(t => t.area >= 100000),
+    small: () => temples.filter(t => t.area < 30000)
 };
 
 document.getElementById("primary-nav").addEventListener("click", (e) => {
