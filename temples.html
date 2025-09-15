@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Temple Album</title>
+    <meta name="description" content="WDD131 - Picture Album with hamburger menu and filters." />
+    <!-- CSS (mobile-first) -->
+    <link rel="stylesheet" href="styles/temples.css">
+    <!-- CSS para telas maiores -->
+    <link rel="stylesheet" href="styles/temples-large.css" media="(min-width: 700px)">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="brandbar">
+            <button id="menu" class="hamburger" aria-label="Open menu" aria-controls="primary-nav"
+                aria-expanded="false">☰</button>
+            <h1 class="brand">Temple Album</h1>
+        </div>
+
+        <nav id="primary-nav" class="nav" aria-label="Main">
+            <ul>
+                <li><a href="#" data-filter="home" class="active">Home</a></li>
+                <li><a href="#" data-filter="old">Old</a></li>
+                <li><a href="#" data-filter="new">New</a></li>
+                <li><a href="#" data-filter="large">Large</a></li>
+                <li><a href="#" data-filter="small">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2 id="view-title">Home</h2>
+
+        <!-- A grade é populada via JS com pelo menos 9 <figure> -->
+        <section id="gallery" class="gallery" aria-live="polite">
+            <noscript>Please enable JavaScript to view the temple gallery.</noscript>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Iago Melo • Hamilton • ON • Canada </p>
+        <p>Last Modification: <span id="lastmod"></span></p>
+    </footer>
+
+    <!-- JS em arquivo externo (defer) -->
+    <script src="scripts/temples.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+/* Header: nav horizontal e sem hamburger */
+.hamburger {
+    display: none
+}
+
+/* requisito: só aparece no mobile */
+
+.nav {
+    display: block;
+    /* visível em telas grandes */
+    border-top: none;
+}
+
+.nav ul {
+    display: flex;
+    gap: .5rem;
+    padding: 0 1rem 1rem;
+}
+
+.nav li {
+    border: 0
+}
+
+.nav a {
+    border-radius: .6rem;
+    padding: .6rem .9rem;
+    background: rgba(255, 255, 255, .07);
+    transition: transform .1s ease;
+}
+
+.nav a:hover {
+    transform: translateY(-1px)
+}
+
+/* Main centralizado e largura limitada */
+main {
+    max-width: 1000px
+}
+
+/* Gallery: 3 colunas (similar ao exemplo) */
+.gallery {
+    grid-template-columns: repeat(3, 1fr);
+    gap: .85rem;
+}
