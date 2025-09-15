@@ -49,7 +49,7 @@ const filters = {
     old: () => temples.filter(t => t.dedicated < 1950),
     new: () => temples.filter(t => t.dedicated > 2020),
     large: () => temples.filter(t => t.area >= 100000),
-    small: () => temples.filter(t => t.area < 30000)
+    small: () => temples.filter(t => t.area < 50000)
 };
 
 document.getElementById("primary-nav").addEventListener("click", (e) => {
