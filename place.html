@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Place</title>
+    <meta name="description" content="Single page per wireframe: title, hero, data, weather." />
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <h1 class="place-title">Place Title</h1>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section class="hero" aria-label="Hero image">
+            <picture>
+                <source srcset="images/armadillo-large.webp" media="(min-width: 1000px)">
+                <source srcset="images/armadillo-medium.webp" media="(min-width: 500px)">
+                <img src="images/armadillo-small.webp" alt="Armadillo in its natural habitat" width="1500" height="750">
+            </picture>
+
+            <!-- Data panel -->
+            <div class="panel data-panel">
+                <h2>Data</h2>
+                <dl class="kv">
+                    <div>
+                        <dt>Area</dt>
+                        <dd>—</dd>
+                    </div>
+                    <div>
+                        <dt>Population</dt>
+                        <dd>—</dd>
+                    </div>
+                    <div>
+                        <dt>Capital</dt>
+                        <dd>—</dd>
+                    </div>
+                    <div>
+                        <dt>Languages</dt>
+                        <dd>—</dd>
+                    </div>
+                    <div>
+                        <dt>Currency</dt>
+                        <dd>—</dd>
+                    </div>
+                    <div>
+                        <dt>Time Zone</dt>
+                        <dd>—</dd>
+                    </div>
+                </dl>
+            </div>
+
+            <!-- Weather panel -->
+            <div class="panel weather-panel">
+                <h2 class="weather-title">Weather</h2>
+                <!-- SVG icon (mobile) -->
+                <div class="wx-icon" aria-hidden="true">
+                    <svg viewBox="0 0 64 64" width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="38" cy="22" r="10" fill="currentColor" />
+                        <path d="M18 46h30a8 8 0 0 0 0-16c-.8 0-1.6.1-2.3.3A12 12 0 0 0 14 34a8 8 0 0 0 4 12Z"
+                            fill="currentColor" />
+                    </svg>
+                </div>
+                <dl class="kv">
+                    <div>
+                        <dt>Temperature</dt>
+                        <dd><span id="temp">8</span> °C</dd>
+                    </div>
+                    <div>
+                        <dt>Conditions</dt>
+                        <dd>Partly Cloudy</dd>
+                    </div>
+                    <div>
+                        <dt>Wind</dt>
+                        <dd><span id="wind">6</span> km/h</dd>
+                    </div>
+                    <div>
+                        <dt>Wind Chill</dt>
+                        <dd><span id="windchill">N/A</span></dd>
+                    </div>
+                </dl>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="year"></span> Iago Melo · Last modified: <span id="lastmod"></span></p>
+    </footer>
+</body>
+
+</html>
