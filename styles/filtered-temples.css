@@ -1,0 +1,161 @@
+:root {
+    --bg: #5f4a4a6e;
+    --ink: #000000;
+    --muted: #000000;
+    --brand: #471375;
+    --brand-ink: #ffffff;
+    --card: #ffffff;
+    --card-border: #000000;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    height: auto
+}
+
+body {
+    min-height: 100svh;
+    font: 16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    display: flex;
+    flex-direction: column;
+}
+
+.site-header {
+    background: var(--brand);
+    color: var(--brand-ink);
+}
+
+.brandbar {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    padding: .75rem 1rem;
+}
+
+.brand {
+    font-size: 1.25rem;
+    font-weight: 700
+}
+
+.hamburger {
+    font-size: 1.4rem;
+    line-height: 1;
+    border: 1px solid rgba(255, 255, 255, .35);
+    background: transparent;
+    color: var(--brand-ink);
+    border-radius: .5rem;
+    padding: .35rem .6rem;
+    cursor: pointer;
+}
+
+.nav {
+    display: none;
+    border-top: 1px solid rgba(255, 255, 255, .25)
+}
+
+.nav.open {
+    display: block
+}
+
+.nav ul {
+    list-style: none
+}
+
+.nav li {
+    border-bottom: 1px solid rgba(255, 255, 255, .15)
+}
+
+.nav a {
+    display: block;
+    padding: .9rem 1rem;
+    color: var(--brand-ink);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.nav a:hover,
+.nav a:focus {
+    background: rgba(255, 255, 255, .12)
+}
+
+.nav a.active {
+    outline: 2px solid rgba(255, 255, 255, 0.8)
+}
+
+main {
+    width: 100%;
+    max-width: 880px;
+    margin: 1rem auto 2rem;
+    padding: 0 1rem;
+}
+
+#view-title {
+    font-size: 1.25rem;
+    margin: .25rem 0 1rem;
+    color: var(--brand);
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+figure.card {
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    border-radius: .75rem;
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.card img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover
+}
+
+.card figcaption {
+    padding: .75rem .9rem;
+    font-size: .95rem;
+}
+
+.card .meta {
+    display: block;
+    color: var(--muted);
+    font-size: .85rem;
+    margin-top: .25rem;
+}
+
+footer {
+    margin-top: auto;
+    text-align: center;
+    background: var(--brand);
+    color: var(--brand-ink);
+    padding: .75rem 1rem;
+    font-size: .9rem;
+}
+
+@media (min-width: 700px) {
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .nav {
+        display: block;
+        border-top: none;
+    }
+
+    .hamburger {
+        display: none;
+    }
+}
