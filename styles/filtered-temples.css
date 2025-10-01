@@ -160,3 +160,17 @@ footer {
         display: none;
     }
 }
+
+/* Animação em câmera lenta só quando entra na tela */
+.gallery img {
+    opacity: 0;
+    /* começa invisível */
+    transition: opacity 1.5s ease-in;
+    will-change: opacity;
+    /* otimização do navegador */
+}
+
+.gallery img.visible {
+    opacity: 1;
+    /* só aparece quando ganha a classe visible */
+}

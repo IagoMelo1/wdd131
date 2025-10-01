@@ -79,6 +79,7 @@ function makeCard(t) {
     img.height = 400;
     img.src = t.imageUrl;
     img.alt = `${t.templeName} – ${t.location}`;
+    img.classList.add("fade"); // começa invisível
 
     const cap = document.createElement("figcaption");
     cap.innerHTML = `
@@ -95,6 +96,9 @@ function render(list, label = "Home") {
     galleryEl.innerHTML = "";
     titleEl.textContent = label;
     list.forEach(t => galleryEl.appendChild(makeCard(t)));
+
+    // Ativa observer para as novas imagens
+    observeImages();
 }
 
 /* ========= Filtros ========= */
@@ -141,6 +145,26 @@ menuBtn.addEventListener("click", toggleMenu);
 /* ========= Footer ========= */
 document.getElementById("year").textContent = new Date().getFullYear();
 document.getElementById("lastmod").textContent = document.lastModified;
+
+/* ========= Observer para fade-in ========= */
+function observeImages() {
+    const options = {
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                obs.unobserve(entry.target); // não precisa observar mais
+            }
+        });
+    }, options);
+
+    document.querySelectorAll(".gallery img").forEach(img => {
+        observer.observe(img);
+    });
+}
 
 /* ========= Render inicial ========= */
 render(temples, "Home");
