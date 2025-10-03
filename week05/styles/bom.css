@@ -1,0 +1,129 @@
+:root {
+    --panel: #e3e3e3;
+    --panel-border: #cfcfcf;
+    --ink: #111;
+    --muted: #6b7280;
+    --field: #fff;
+    --field-border: #c7c7c7;
+    --x-bg: #efefef;
+    --x-border: #c9c9c9;
+    --x-ink: #e84a78;
+}
+
+/* reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 2rem 1rem 3rem;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    color: var(--ink);
+    background: #fff;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: .2px;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.card {
+    width: min(760px, 92vw);
+    background: var(--panel);
+    border: 1px solid var(--panel-border);
+    border-radius: 4px;
+    padding: 1.25rem;
+    display: grid;
+    gap: .75rem;
+}
+
+label {
+    font-weight: 800;
+    color: var(--ink);
+    margin-bottom: .25rem;
+}
+
+input {
+    width: 100%;
+    padding: .65rem .75rem;
+    background: var(--field);
+    border: 1.5px solid var(--field-border);
+    border-radius: 4px;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: .7rem 1rem;
+    border-radius: 4px;
+    border: 1.5px solid var(--field-border);
+    background: #f3f3f3;
+    font-size: 1.05rem;
+    cursor: pointer;
+}
+
+button:hover {
+    filter: brightness(.98);
+}
+
+ul {
+    list-style: none;
+    display: grid;
+    gap: 1rem;
+    margin-top: .25rem;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .75rem;
+    padding: .35rem .25rem;
+}
+
+/* first line bold */
+li::first-line {
+    font-weight: 800;
+}
+
+/* delete button */
+li button.delete {
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    border-radius: 6px;
+    background: var(--x-bg);
+    border: 1.5px solid var(--x-border);
+    color: var(--x-ink);
+    font-size: 1.15rem;
+    font-weight: 700;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0;
+}
+
+li button.delete:hover {
+    filter: brightness(.97);
+}
+
+@media (min-width:700px) {
+    h1 {
+        font-size: 2.25rem;
+    }
+
+    .card {
+        width: min(860px, 90vw);
+    }
+}
