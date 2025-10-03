@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Confirmation</title>
+    <meta name="author" content="Iago Melo">
+    <link rel="stylesheet" href="styles/form.css">
+</head>
+
+<body>
+    <main class="card">
+        <h1>Thank you for your review!</h1>
+        <p>Your review has been submitted successfully.</p>
+        <p id="counter"></p>
+        <a href="form.html">Submit another review</a>
+    </main>
+    <footer>
+        <p>&copy; 2024 Product Review | Author: Iago Melo</p>
+    </footer>
+    <script>
+        // increment review count in localStorage
+        let count = Number(localStorage.getItem("reviewCount")) || 0;
+        count++;
+        localStorage.setItem("reviewCount", count);
+        document.getElementById("counter").textContent =
+            `Total reviews submitted so far: ${count}`;
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review</title>
+    <meta name="author" content="Iago Melo">
+    <link rel="stylesheet" href="styles/form.css">
+</head>
+
+<body>
+    <main class="card">
+        <h1>Product Review</h1>
+        <form method="get" action="review.html">
+
+            <!-- Product Name -->
+            <label for="productName">Product Name</label>
+            <select id="productName" name="productName" required>
+                <option value="" disabled selected>Choose a Product...</option>
+                <!-- Options added dynamically by JS -->
+            </select>
+
+            <!-- Overall Rating -->
+            <fieldset>
+                <legend>Overall Rating</legend>
+                <label><input type="radio" name="rating" value="1" required> ★</label>
+                <label><input type="radio" name="rating" value="2"> ★★</label>
+                <label><input type="radio" name="rating" value="3"> ★★★</label>
+                <label><input type="radio" name="rating" value="4"> ★★★★</label>
+                <label><input type="radio" name="rating" value="5"> ★★★★★</label>
+            </fieldset>
+
+            <!-- Date -->
+            <label for="installDate">Date of Installation</label>
+            <input type="date" id="installDate" name="installDate" required>
+
+            <!-- Useful Features -->
+            <fieldset>
+                <legend>Which features did you find useful? (Check all that apply)</legend>
+                <label><input type="checkbox" id="durability" name="features" value="Durability"> Durability</label>
+                <label><input type="checkbox" id="ease" name="features" value="Ease of Use"> Ease of Use</label>
+                <label><input type="checkbox" id="performance" name="features" value="Performance"> Performance</label>
+                <label><input type="checkbox" id="design" name="features" value="Design"> Design</label>
+            </fieldset>
+
+            <!-- Written Review -->
+            <label for="review">Written Review (optional)</label>
+            <textarea id="review" name="review"></textarea>
+
+            <!-- User Name -->
+            <label for="username">Your Name (optional)</label>
+            <input type="text" id="username" name="username">
+
+            <!-- Submit -->
+            <input type="submit" value="Post Review">
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 Product Review | Author: Iago Melo</p>
+    </footer>
+    <script src="scripts/form.js"></script>
+</body>
+
+</html>
